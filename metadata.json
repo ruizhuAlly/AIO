@@ -1,0 +1,5 @@
+{
+  "name": "AIO System",
+  "description": "A comprehensive enterprise management system featuring login, module selection, and reimbursement processing with approval workflows.",
+  "requestFramePermissions": []
+}
