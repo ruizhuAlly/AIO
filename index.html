@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,33 +12,22 @@
             margin: 0;
             background-color: #f0f2f5;
         }
-        /* Custom scrollbar to match enterprise look */
-        ::-webkit-scrollbar {
-            width: 6px;
-            height: 6px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #ccc;
-            border-radius: 3px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #bbb;
-        }
+        /* ...你的滚动条样式... */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #ccc; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #bbb; }
     </style>
-<script type="importmap">
-{
-  "imports": {
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3"
-  }
-}
-</script>
+    
+    <!-- ❌ 删除：由于你已经 npm install 了，不要再用下面这个 importmap -->
+    <!-- 如果保留它，可能会导致本地 React 和 CDN React 冲突 -->
+    <!-- <script type="importmap"> ... </script> --> 
 </head>
 <body>
     <div id="root"></div>
+
+    <!-- ✅ 新增：最关键的一行！ -->
+    <!-- 因为你的 index.tsx 就在根目录，所以直接写 /index.tsx -->
+    <script type="module" src="/index.tsx"></script>
 </body>
 </html>
